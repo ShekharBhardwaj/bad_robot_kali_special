@@ -10,8 +10,8 @@ def identfy_target():
 		os.system(cmd)
 	finally:
 		print('BadRobot over and out...')
-		caution = '''This is illigal if you are doing this to an unsuspected victim.
-			I would highly recommend you that you take permission before this attack.
+		caution = '''This is illegal, if you are doing this to an unsuspected victim,
+			I would highly recommend that you take permission before this attack.
 			'''
 		print(caution)
 
