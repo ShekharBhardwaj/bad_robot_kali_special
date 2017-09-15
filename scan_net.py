@@ -6,8 +6,10 @@ def scan():
 		print('CAUTION: This script is for educational purposes only')
 		print('starting monitoring on wlan0')
 		os.system('airmon-ng start wlan0')
-		print('If you are seeing any output make sure your wifi adapter is in place and working')
+		print('If you are not seeing any output make sure your wifi adapter is in place and working')
 		os.system('airodump-ng wlan0mon')
+	except ValueError as e:
+		print('Script failed due to ----> {}'.format(e))
 	finally:
 		print('BadRobot over and out...')
 
