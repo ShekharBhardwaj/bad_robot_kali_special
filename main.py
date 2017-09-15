@@ -28,28 +28,36 @@ class Main:
 
     def selection_action(self):
         os.system('clear')
-        self.start
-        while True:
-            str_u = input('Enter your choice: ')
-            if str_u == '1':
-                sn.scan()
-            elif str_u == '2':
-                di.identfy_target()
-            elif str_u == '3':
-                pd.dump()
-            elif str_u == '4':
-                cma.change()
-            elif str_u == 'KILL':
-                ks.kill()
-            elif str_u == 'q':
-                os.system('clear')
-                break
-            elif str_u == 'H':
-                os.system('clear')
-                print('HELP:')
-                print(self.welcome)
-        else:
-            print('BadRobot left the terminal..')
+        try:
+            self.start
+            while True:
+                str_u = input('Enter your choice: ')
+                if str_u == '1':
+                    sn.scan()
+                elif str_u == '2':
+                    di.identfy_target()
+                elif str_u == '3':
+                    pd.dump()
+                elif str_u == '4':
+                    cma.change()
+                elif str_u == 'KILL':
+                    ks.kill()
+                elif str_u == 'q':
+                    os.system('clear')
+                    break
+                elif str_u == 'H':
+                    os.system('clear')
+                    print('HELP:')
+                    print(self.welcome)
+                else:
+                    print('NOT_A_VALID_OPTION ---> Press H for HELP')
+            else:
+                print('BadRobot left the terminal..')
+        except KeyboardInterrupt:
+            print('KeyboardInterrupt_Registered_BadRobot_EXITED')
+        finally:
+            print('Bye Bye..')
+
 
 
 if __name__ == '__main__':
@@ -57,4 +65,5 @@ if __name__ == '__main__':
     m = Main()
     selection = m.start
     m.selection_action()
+
 
