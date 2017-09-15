@@ -56,5 +56,5 @@ if __name__ == '__main__':
     run = True
     m = Main()
     selection = m.start
-    m.selection_action(selection)
+    m.selection_action()
 
