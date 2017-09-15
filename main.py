@@ -27,9 +27,9 @@ class Main:
         print(self.welcome)
 
     def selection_action(self):
+        os.system('clear')
         self.start
         while True:
-            os.system('clear')
             str_u = input('Enter your choice: ')
             if str_u == '1':
                 sn.scan()
