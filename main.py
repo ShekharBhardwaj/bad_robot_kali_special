@@ -4,6 +4,7 @@ import kill_switch as ks
 import packet_dumper as pd
 import scan_net as sn
 import os
+import logo as l
 
 
 class Main:
@@ -23,6 +24,7 @@ class Main:
 
     @property
     def start(self):
+        l.logo()
         print('Welcome script kiddie:')
         print(self.welcome)
 
